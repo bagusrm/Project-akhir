@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="distroshop" Class="distroshopDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-OEL5F93;Initial Catalog=distroshop;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="Project_akhir.Properties.Settings" SettingsPropertyName="distroshopConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.detailpembelian" Member="detailpembelians">
+    <Type Name="detailpembelian">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdPembelian" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdVarian" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Jumlah" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HargaBeli" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="pembelian_detailpembelian" Member="pembelian" ThisKey="IdPembelian" OtherKey="IdPembelian" Type="pembelian" IsForeignKey="true" />
+      <Association Name="varianproduk_detailpembelian" Member="varianproduk" ThisKey="IdVarian" OtherKey="IdVarian" Type="varianproduk" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.detailpesanan" Member="detailpesanans">
+    <Type Name="detailpesanan">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdPesanan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdVarian" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Jumlah" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HargaSatuan" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SubTotal" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="pesanan_detailpesanan" Member="pesanan" ThisKey="IdPesanan" OtherKey="IdPesanan" Type="pesanan" IsForeignKey="true" />
+      <Association Name="varianproduk_detailpesanan" Member="varianproduk" ThisKey="IdVarian" OtherKey="IdVarian" Type="varianproduk" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.kategori" Member="kategoris">
+    <Type Name="kategori">
+      <Column Name="IdKategori" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NamaKategori" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="kategori_produk" Member="produks" ThisKey="IdKategori" OtherKey="IdKategori" Type="produk" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pelanggan" Member="pelanggans">
+    <Type Name="pelanggan">
+      <Column Name="IdPelanggan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="JenisPelanggan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NoTelepon" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Alamat" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TanggalDaftar" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="pelanggan_pesanan" Member="pesanans" ThisKey="IdPelanggan" OtherKey="IdPelanggan" Type="pesanan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pemasok" Member="pemasoks">
+    <Type Name="pemasok">
+      <Column Name="IdPemasok" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NoTelepon" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Tanggal" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Alamat" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="pemasok_pembelian" Member="pembelians" ThisKey="IdPemasok" OtherKey="IdPemasok" Type="pembelian" />
+      <Association Name="pemasok_produk" Member="produks" ThisKey="IdPemasok" OtherKey="IdPemasok" Type="produk" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pembelian" Member="pembelians">
+    <Type Name="pembelian">
+      <Column Name="IdPembelian" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IdPemasok" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdPengguna" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalHarga" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Catatan" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="pembelian_detailpembelian" Member="detailpembelians" ThisKey="IdPembelian" OtherKey="IdPembelian" Type="detailpembelian" />
+      <Association Name="pemasok_pembelian" Member="pemasok" ThisKey="IdPemasok" OtherKey="IdPemasok" Type="pemasok" IsForeignKey="true" />
+      <Association Name="pengguna_pembelian" Member="pengguna" ThisKey="IdPengguna" OtherKey="IdPengguna" Type="pengguna" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pengguna" Member="penggunas">
+    <Type Name="pengguna">
+      <Column Name="IdPengguna" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NamaLengkap" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordHash" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="pengguna_pembelian" Member="pembelians" ThisKey="IdPengguna" OtherKey="IdPengguna" Type="pembelian" />
+      <Association Name="pengguna_pesanan" Member="pesanans" ThisKey="IdPengguna" OtherKey="IdPengguna" Type="pesanan" />
+      <Association Name="pengguna_produk" Member="produks" ThisKey="IdPengguna" OtherKey="IdPengguna" Type="produk" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pesanan" Member="pesanans">
+    <Type Name="pesanan">
+      <Column Name="IdPesanan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IdPelanggan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdPengguna" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalHarga" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="StatusPengiriman" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ekspedisi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NoResi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="pesanan_detailpesanan" Member="detailpesanans" ThisKey="IdPesanan" OtherKey="IdPesanan" Type="detailpesanan" />
+      <Association Name="pelanggan_pesanan" Member="pelanggan" ThisKey="IdPelanggan" OtherKey="IdPelanggan" Type="pelanggan" IsForeignKey="true" />
+      <Association Name="pengguna_pesanan" Member="pengguna" ThisKey="IdPengguna" OtherKey="IdPengguna" Type="pengguna" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.produk" Member="produks">
+    <Type Name="produk">
+      <Column Name="IdProduk" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IdKategori" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdPemasok" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdPengguna" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deskripsi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HargaDasar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="produk_varianproduk" Member="varianproduks" ThisKey="IdProduk" OtherKey="IdProduk" Type="varianproduk" />
+      <Association Name="kategori_produk" Member="kategori" ThisKey="IdKategori" OtherKey="IdKategori" Type="kategori" IsForeignKey="true" />
+      <Association Name="pemasok_produk" Member="pemasok" ThisKey="IdPemasok" OtherKey="IdPemasok" Type="pemasok" IsForeignKey="true" />
+      <Association Name="pengguna_produk" Member="pengguna" ThisKey="IdPengguna" OtherKey="IdPengguna" Type="pengguna" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.varianproduk" Member="varianproduks">
+    <Type Name="varianproduk">
+      <Column Name="IdVarian" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdProduk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ukuran" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Warna" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Jumlah" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HargaJual" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="varianproduk_detailpembelian" Member="detailpembelians" ThisKey="IdVarian" OtherKey="IdVarian" Type="detailpembelian" />
+      <Association Name="varianproduk_detailpesanan" Member="detailpesanans" ThisKey="IdVarian" OtherKey="IdVarian" Type="detailpesanan" />
+      <Association Name="produk_varianproduk" Member="produk" ThisKey="IdProduk" OtherKey="IdProduk" Type="produk" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

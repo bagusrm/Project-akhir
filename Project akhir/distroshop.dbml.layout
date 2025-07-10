@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 21.5" name="distroshop">
+  <DataContextMoniker Name="/distroshopDataContext" />
+  <nestedChildShapes>
+    <classShape Id="00829301-28e9-4d9d-83f6-be796fcbe38e" absoluteBounds="2, 2.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/distroshopDataContext/detailpembelian" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a62478e-fb28-4e91-b420-4cf97dd1303a" absoluteBounds="2.015, 3.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e162e4ae-1e7c-47a9-8506-812d28ee6c1f" absoluteBounds="1.5, 4.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/distroshopDataContext/detailpesanan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2505495-23da-428b-8108-5108c91c08f0" absoluteBounds="1.5150000000000001, 5.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39ec7d90-7a12-484e-9777-24237741c681" absoluteBounds="3.375, 6.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/distroshopDataContext/kategori" />
+      <nestedChildShapes>
+        <elementListCompartment Id="782af4d7-63ac-4c88-be15-695115ca02d7" absoluteBounds="3.39, 7.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba26a2d1-f074-47d2-8d6e-59ba2dac1033" absoluteBounds="0.875, 7.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/distroshopDataContext/pelanggan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7dedbe9f-4297-4ee9-8baa-4c342fa5c6da" absoluteBounds="0.89000000000000012, 7.7100000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fe12fd6e-8f60-476a-9767-2b4b75beae1c" absoluteBounds="4.375, 8.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/distroshopDataContext/pemasok" />
+      <nestedChildShapes>
+        <elementListCompartment Id="346f23d1-32a5-4235-a8d2-f9dacdc97749" absoluteBounds="4.39, 9.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="620245ce-0b47-4ce2-abab-3b03a0280509" absoluteBounds="2.125, 10.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/distroshopDataContext/pembelian" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21c7ffe7-63e0-40d7-a46e-f1457e9cac2d" absoluteBounds="2.14, 10.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.0624995 : 10.5); (3.0624995 : 9.65549967447917); (2.14583333333333 : 9.65549967447917 : JumpStart); (1.97916666666667 : 9.65549967447917 : JumpEnd); (1.23958333333333 : 9.65549967447917 : JumpStart); (1.07291666666667 : 9.65549967447917 : JumpEnd); (0.625 : 9.65549967447917); (0.625 : 3.60659912109375); (2 : 3.60659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/distroshopDataContext/pembelian/pembelian_detailpembelian" />
+      <nodes>
+        <classShapeMoniker Id="620245ce-0b47-4ce2-abab-3b03a0280509" />
+        <classShapeMoniker Id="00829301-28e9-4d9d-83f6-be796fcbe38e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.375 : 10.7804996744792); (5.375 : 11.4815991210937); (4.77083333333333 : 11.4815991210937 : JumpStart); (4.60416666666667 : 11.4815991210937 : JumpEnd); (4.33333333333333 : 11.4815991210937 : JumpStart); (4.16666666666667 : 11.4815991210937 : JumpEnd); (4.125 : 11.4815991210937)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/distroshopDataContext/pemasok/pemasok_pembelian" />
+      <nodes>
+        <classShapeMoniker Id="fe12fd6e-8f60-476a-9767-2b4b75beae1c" />
+        <classShapeMoniker Id="620245ce-0b47-4ce2-abab-3b03a0280509" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="75da82b0-9021-4ab7-ab21-f803602bd939" absoluteBounds="1.5, 13.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/distroshopDataContext/pengguna" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2faec69-7c00-4d65-9da5-5735438a336c" absoluteBounds="1.5150000000000001, 13.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.8125 : 13.125); (2.8125 : 12.4631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/distroshopDataContext/pengguna/pengguna_pembelian" />
+      <nodes>
+        <classShapeMoniker Id="75da82b0-9021-4ab7-ab21-f803602bd939" />
+        <classShapeMoniker Id="620245ce-0b47-4ce2-abab-3b03a0280509" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3f578ad6-de2b-4c82-a457-21eefb48ae43" absoluteBounds="5, 13.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/distroshopDataContext/pesanan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6b4a3933-71bf-49f0-9a21-9fc2c146a8e2" absoluteBounds="5.015, 14.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.71875 : 13.875); (6.71875 : 5.73159912109375); (3.5 : 5.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/distroshopDataContext/pesanan/pesanan_detailpesanan" />
+      <nodes>
+        <classShapeMoniker Id="3f578ad6-de2b-4c82-a457-21eefb48ae43" />
+        <classShapeMoniker Id="e162e4ae-1e7c-47a9-8506-812d28ee6c1f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.15625 : 9.40549967447917); (1.15625 : 15.6386768164063); (2.22916666666667 : 15.6386768164063 : JumpStart); (2.39583333333333 : 15.6386768164063 : JumpEnd); (2.85416666666667 : 15.6386768164063 : JumpStart); (3.02083333333333 : 15.6386768164063 : JumpEnd); (4.16666666666667 : 15.6386768164063 : JumpStart); (4.33333333333333 : 15.6386768164063 : JumpEnd); (4.60416666666667 : 15.6386768164063 : JumpStart); (4.77083333333333 : 15.6386768164063 : JumpEnd); (5 : 15.6386768164063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/distroshopDataContext/pelanggan/pelanggan_pesanan" />
+      <nodes>
+        <classShapeMoniker Id="ba26a2d1-f074-47d2-8d6e-59ba2dac1033" />
+        <classShapeMoniker Id="3f578ad6-de2b-4c82-a457-21eefb48ae43" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 14.3854484049479); (4.16666666666667 : 14.3854484049479 : JumpStart); (4.33333333333333 : 14.3854484049479 : JumpEnd); (4.60416666666667 : 14.3854484049479 : JumpStart); (4.77083333333333 : 14.3854484049479 : JumpEnd); (5 : 14.3854484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/distroshopDataContext/pengguna/pengguna_pesanan" />
+      <nodes>
+        <classShapeMoniker Id="75da82b0-9021-4ab7-ab21-f803602bd939" />
+        <classShapeMoniker Id="3f578ad6-de2b-4c82-a457-21eefb48ae43" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="920f2dec-35a2-4671-b174-da5f288d2bdb" absoluteBounds="2.375, 16.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/distroshopDataContext/produk" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a340fcc4-e65e-487d-933e-b0b64a26b777" absoluteBounds="2.39, 17.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.25 : 8.06899251302083); (4.25 : 16.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/distroshopDataContext/kategori/kategori_produk" />
+      <nodes>
+        <classShapeMoniker Id="39ec7d90-7a12-484e-9777-24237741c681" />
+        <classShapeMoniker Id="920f2dec-35a2-4671-b174-da5f288d2bdb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.6875 : 10.7804996744792); (4.6875 : 17.8277498372396); (4.375 : 17.8277498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/distroshopDataContext/pemasok/pemasok_produk" />
+      <nodes>
+        <classShapeMoniker Id="fe12fd6e-8f60-476a-9767-2b4b75beae1c" />
+        <classShapeMoniker Id="920f2dec-35a2-4671-b174-da5f288d2bdb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.9375 : 14.8958968098958); (2.9375 : 16.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/distroshopDataContext/pengguna/pengguna_produk" />
+      <nodes>
+        <classShapeMoniker Id="75da82b0-9021-4ab7-ab21-f803602bd939" />
+        <classShapeMoniker Id="920f2dec-35a2-4671-b174-da5f288d2bdb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ac2d5114-7121-443a-9e81-65bbef491bb7" absoluteBounds="3.125, 19.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/distroshopDataContext/varianproduk" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49646a68-99d5-441e-8f50-7d343a9d4191" absoluteBounds="3.14, 19.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 20.2315991210938); (2.3125 : 20.2315991210938); (2.3125 : 14.9583968098958); (3.5625 : 14.9583968098958); (3.5625 : 12.5256982421875); (2.0625 : 12.5256982421875); (2.0625 : 9.46799967447917); (2.9375 : 9.46799967447917); (2.9375 : 6.7756982421875); (3.5625 : 6.7756982421875); (3.5625 : 4.6819482421875); (3 : 4.6819482421875); (3 : 4.5881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/distroshopDataContext/varianproduk/varianproduk_detailpembelian" />
+      <nodes>
+        <classShapeMoniker Id="ac2d5114-7121-443a-9e81-65bbef491bb7" />
+        <classShapeMoniker Id="00829301-28e9-4d9d-83f6-be796fcbe38e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.125 : 19.7095475605469); (1 : 19.7095475605469); (1 : 9.90549967447917); (3.25 : 9.90549967447917); (3.25 : 7.0881982421875); (2.2187505 : 7.0881982421875); (2.2187505 : 6.7131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/distroshopDataContext/varianproduk/varianproduk_detailpesanan" />
+      <nodes>
+        <classShapeMoniker Id="ac2d5114-7121-443a-9e81-65bbef491bb7" />
+        <classShapeMoniker Id="e162e4ae-1e7c-47a9-8506-812d28ee6c1f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 18.9054996744792); (3.75 : 19.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/distroshopDataContext/produk/produk_varianproduk" />
+      <nodes>
+        <classShapeMoniker Id="920f2dec-35a2-4671-b174-da5f288d2bdb" />
+        <classShapeMoniker Id="ac2d5114-7121-443a-9e81-65bbef491bb7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
