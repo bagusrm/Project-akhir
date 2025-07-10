@@ -22,5 +22,4 @@ memungkinkan pengelolaan data produk secara lengkap, termasuk ukuran, warna, dan
 serta mendukung pemrosesan pesanan mulai dari input hingga pembaruan status, pencatatan 
 pengiriman, pembuatan laporan penjualan dan stok, hingga pencetakan invoice. Namun, 
 aplikasi ini tidak mencakup integrasi dengan marketplace online maupun sistem pembayaran 
-otomatis, sehingga tetap fokus pada proses internal distribusi pakaian. Pada aplikasi ini tentunya 
-memiliki analisis kebutuhan yang terbagi menjadi 2 yaitu:
+otomatis, sehingga tetap fokus pada proses internal distribusi pakaian.
