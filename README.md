@@ -1,4 +1,4 @@
-
+link vidio project https://drive.google.com/file/d/1U_JeTlWIaHZ_96Bg4fUpiys47FusvJKI/view?usp=sharing 
 Daftar Kontribusi:
 1. Bagus Dwi Rakhmawan: Membuat Form Login Page, Menyiapkan Main Form/Menu Utama, Menyusun alur navigasi antar form, Integrasi form & testing
 2. Febriansyah Husni Adiatma: Membuat Form Input Pelanggan (ID, Nama, Jenis, Email, Telepon, Alamat, Tanggal), Membuat halaman detailbeli
